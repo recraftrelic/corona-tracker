@@ -35,8 +35,9 @@ const recordFields = [
 
 const RecordDetails = ({ record }) => {
   return recordFields.map(
-    field => (
+    (field, index) => (
       <RecordItem
+        key={index}
         label={field.name}
         value={record[field.key]}
         valueClass={field.valueClass}
