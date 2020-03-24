@@ -5,7 +5,7 @@
 [<h1 align="center">coronatracker.recraftrelic.com</h1>](http://coronatracker.recraftrelic.com)
 
 <p align="center">
-<img src="./corona-tracker.png" />
+<img src="./tracker.png" />
 </p>
 
 # Contributors
