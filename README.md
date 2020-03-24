@@ -1,6 +1,6 @@
 <h1 align="center">Corona Virus Tracker</h1>
 
-<p align="center">Corona Virus Tracker app offers accurate number of infected patients all over the world and for other countries as well. It goes beyond simple monitoring to provide a powerful management tool for remote companies.</p>
+<p align="center">Corona Virus Tracker app offers accurate number of infected patients all over the world and for other countries as well.</p>
 
 [<h1 align="center">coronatracker.recraftrelic.com</h1>](http://coronatracker.recraftrelic.com)
 
