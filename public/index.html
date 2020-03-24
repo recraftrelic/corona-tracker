@@ -1,15 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
-    <meta
-      name="description"
-      content="Corona virus tracker"
-    />
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+    <link rel="icon" type="image/jpg" href="%PUBLIC_URL%/logo.png" />
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Recraft Corona Virus Tracker app offers accurate number of infected patients all over the world and for other countries as well.">
+    <meta itemprop="name" content="Recraft Corona virus tracker">
+    <meta itemprop="description" content="Recraft Corona Virus Tracker app offers accurate number of infected patients all over the world and for other countries as well.">
+    <meta itemprop="image" content="https://recraftrelic.com/images/Recraft_relic_web_logo_icon.png">
+    <!-- Twitter Card data -->
+    <meta name="twitter:card" content="https://recraftrelic.com/images/Recraft_relic_web_logo_icon.png">
+    <meta name="twitter:site" content="@recraftrelic">
+    <meta name="twitter:title" content="Recraft Corona virus tracker">
+    <meta name="twitter:description" content="Recraft Corona Virus Tracker app offers accurate number of infected patients all over the world and for other countries as well.">
+    <meta name="twitter:creator" content="@recraftrelic">
+    <!-- Twitter summary card with large image must be at least 280x150px -->
+    <meta name="twitter:image:src" content="https://recraftrelic.com/images/Recraft_relic_web_logo_icon.png">
+    <!-- Open Graph data -->
+    <meta property="og:title" content="Recraft Corona virus tracker">
+    <meta property="og:url" content="http://www.recraftrelic.com">
+    <meta property="og:image" content="https://recraftrelic.com/images/Recraft_relic_web_logo_icon.png">
+    <meta property="og:description" content="Recraft Corona Virus Tracker app offers accurate number of infected patients all over the world and for other countries as well.">
+    <meta property="og:site_name" content="Recraft Corona virus tracker">
+    <meta property="fb:admins" content="1084809008276529">
     <!--
       manifest.json provides metadata used when your web app is installed on a
       user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
@@ -24,6 +38,14 @@
       work correctly both with client-side routing and a non-root public URL.
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
+    <script type="application/ld+json">
+      {
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          "url": "https://recraftrelic.com",
+          "logo": "https://recraftrelic.com/images/Recraft_relic_web_logo_icon.png"
+      }
+    </script>
     <title>Corona Virus Tracker</title>
   </head>
   <body>
@@ -39,5 +61,13 @@
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-70116365-12"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-70116365-12');
+    </script>
   </body>
 </html>
