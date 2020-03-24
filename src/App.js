@@ -49,7 +49,7 @@ function App() {
             return result.concat(response.data.countrynewsitems[0][item])
           }, [])
 
-          setNewsItems(news)
+          setNewsItems(news.reverse())
         })
         .catch(() => setLoading(false))
     }
