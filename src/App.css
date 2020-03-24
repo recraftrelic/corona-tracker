@@ -12,3 +12,7 @@
   align-items: center;
   justify-content: center;
 }
+
+.twelve.columns h3 {
+  padding-top: 40px;
+}

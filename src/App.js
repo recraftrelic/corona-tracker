@@ -84,7 +84,7 @@ function App() {
       <RecordDetails
         record={record}
       />
-      <h3>News</h3>
+      { region !== "world" ? <h3>News</h3> : null }
       {
         newsItems.map(
           (news, index) => (
