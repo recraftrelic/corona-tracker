@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import axios from "axios";
 import ReactLoading from 'react-loading';
 import RecordDetails from './components/RecordDetails';
+import Recharts from './components/Recharts';
 import { countries } from './constants';
 
 import './normalize.css';
@@ -14,6 +15,7 @@ function App() {
   const [region, setRegion] = useState("world")
   const [loading, setLoading] = useState(true)
   const [newsItems, setNewsItems] = useState([])
+  const [chartData, setChartData] = useState({})
 
   const getAndSetGlobalData = () => {
     axios("https://thevirustracker.com/free-api?global=stats")
@@ -29,8 +31,18 @@ function App() {
       .catch(() => setLoading(false))
   }
 
+  const myChart = () => {
+    axios(`https://thevirustracker.com/free-api?global=stats`)
+      .then(response => {
+        setLoading(false)
+        setChartData(response.data.results[0])
+      })
+      .catch(() => setLoading(false))
+  }
+
   useEffect(() => {
     getAndSetGlobalData()
+    myChart()
   }, [])
 
   useEffect(() => {
@@ -84,21 +96,9 @@ function App() {
       <RecordDetails
         record={record}
       />
-      { region !== "world" ? <h3>News</h3> : null }
-      {
-        newsItems.map(
-          (news, index) => (
-            <div key={index} className="row">
-              <div className="two columns">
-                <img className="u-max-full-width" src={news.image} />
-              </div>
-              <div className="ten columns">
-                <h5 dangerouslySetInnerHTML={{__html: news.title}}></h5>
-              </div>
-            </div>
-          )
-        )
-      }
+      <Recharts
+        record={chartData}
+      />
     </div>
   );
 }
