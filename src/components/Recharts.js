@@ -37,8 +37,6 @@ const active = [
 const Recharts = ({ record }) => {
     const chartDate = Object.keys(record).map(key => key) //all the dates
     const chartData = Object.keys(record).map(key => record[key]) //all cases record
-    //console.log(chartDate)
-    //console.log(chartData)
     return <>
         <ComposedChart width={730} height={250} data={active}>
             <XAxis dataKey="date" />
