@@ -15,7 +15,7 @@ function App() {
   const [region, setRegion] = useState("world")
   const [loading, setLoading] = useState(true)
   const [newsItems, setNewsItems] = useState([])
-  const [chartData, setChartData] = useState({})
+  const [charts, setCharts] = useState({})
 
   const getAndSetGlobalData = () => {
     axios("https://thevirustracker.com/free-api?global=stats")
@@ -31,18 +31,18 @@ function App() {
       .catch(() => setLoading(false))
   }
 
-  const myChart = () => {
-    axios(`https://thevirustracker.com/free-api?global=stats`)
+  const myChartData = () => {
+    axios(`https://thevirustracker.com/free-api?countryTimeline=${region}`)
       .then(response => {
         setLoading(false)
-        setChartData(response.data.results[0])
+        setCharts(response.data.timelineitems[0])
+        //console.log(response, "response")
       })
       .catch(() => setLoading(false))
   }
 
   useEffect(() => {
     getAndSetGlobalData()
-    myChart()
   }, [])
 
   useEffect(() => {
@@ -64,6 +64,7 @@ function App() {
           setNewsItems(news.reverse())
         })
         .catch(() => setLoading(false))
+        myChartData()
     }
   }, [region])
 
@@ -97,7 +98,7 @@ function App() {
         record={record}
       />
       <Recharts
-        record={chartData}
+        record={charts}
       />
     </div>
   );
